@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Java Learning Audio Player</string>
+    <string name="text_header">Приложение аудио плейер 1.0</string>
+    <string name="http">HTTP</string>
+    <string name="stream">Поток</string>
+    <string name="sd">SD карта</string>
+    <string name="uri">Интернет</string>
+    <string name="raw">Телефон</string>
+    <string name="pause">ПАУЗА</string>
+    <string name="resume">ВОСПРОИЗВЕДЕНИЕ</string>
+    <string name="stop">СТОП</string>
+    <string name="loop">ПОВТОР</string>
+    <string name="backward">НАЗАД</string>
+    <string name="forward">ВПЕРЁД</string>
+    <string name="info">ИНФОРМАЦИЯ</string>
+    <string name="text_source">Источник</string>
+    <string name="text_field_out">Название мелодии</string>
+    <string name="text_toast_distroy_mediaplayer">Отключение медиа-плейера</string>
+    <string name="text_start_mediaplayer">Старт медиа-плейера</string>
+</resources>

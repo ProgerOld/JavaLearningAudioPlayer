@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/text_header"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/text_header"
+        android:textAllCaps="true"
+        android:textColor="#009688"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textOut"
+        android:layout_width="380dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="16dp"
+        android:background="#DCEDC8"
+        android:gravity="center"
+        android:text="@string/text_field_out"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_header" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textOut">
+
+        <Button
+            android:id="@+id/btnResume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#26A69A"
+            android:onClick="onClickButton"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="@string/resume" />
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#26A69A"
+            android:onClick="onClickButton"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="@string/pause" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#26A69A"
+            android:onClick="onClickButton"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="@string/stop" />
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#26A69A"
+            android:onClick="onClickButton"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="@string/backward" />
+
+        <Button
+            android:id="@+id/btnForward"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#26A69A"
+            android:onClick="onClickButton"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="@string/forward" />
+
+        <Switch
+            android:id="@+id/switchLoop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#66BB6A"
+            android:paddingStart="14dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="14dp"
+            android:text="@string/loop"
+            android:textStyle="italic"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <LinearLayout
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:backgroundTint="#42A5F5"
+                android:onClick="onClickVolume"
+                android:text="-"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="#42A5F5"
+                android:onClick="onClickVolume"
+                android:text="+"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:text="@string/text_source"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#009587"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <Button
+            android:id="@+id/btnStream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#42A5F5"
+            android:onClick="onClickSource"
+            android:text="@string/stream" />
+
+        <Button
+            android:id="@+id/btnRAW"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:backgroundTint="#42A5F5"
+            android:onClick="onClickSource"
+            android:text="@string/raw" />
+
+        <Button
+            android:id="@+id/btnSD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#42A5F5"
+            android:onClick="onClickSource"
+            android:text="@string/sd" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
